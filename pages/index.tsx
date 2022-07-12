@@ -8,13 +8,13 @@ const Home: NextPage = () => {
   return (
     <div className="bg-primary min-vh-100 max-vw-100 d-flex flex-column">
       <Head>
-        <title>Jigme's Birthday</title>
+        <title>Jigme&apos;s Birthday</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Container className="py-6 flex-grow-1 d-flex justify-content-center align-items-center flex-column">
         <h1 className="col-12 display-2 text-white text-center">
-          It's Jigme's Birthday 🥳
+          It&apos;s Jigme&apos;s Birthday 🥳
         </h1>
 
         <h2 className="col-12 display-4 text-white text-center ">
@@ -63,7 +63,7 @@ const Gifts = () => {
           <Button
             className="w-100"
             variant="success"
-            href="https://spotify.com"
+            href="https://open.spotify.com/playlist/2PUiLQitBgYyyiZfRzZJVD?si=68abfa257f4c4643"
             target="_blank"
           >
             Go to playlist
@@ -89,7 +89,7 @@ const Gifts = () => {
           <Button
             className="w-100"
             variant="warning"
-            href="https://drive.google.com"
+            href="https://drive.google.com/drive/folders/1494i8A3tm3tPoUNGjbwJV3LzILNUyw8w?usp=sharing"
             target="_blank"
           >
             Go to Drive
