@@ -98,9 +98,9 @@ const Gifts = ({ addPadding }: { addPadding: boolean }) => {
           <h3>Group Media Drive</h3>
 
           <p>
-            Remember that thing you did with Jigme? Well here's you chance to
-            make sure she never forgets! Add in any fun, embarassing, stupid, or
-            otherwise memorable photo or video you have with her into this
+            Remember that thing you did with Jigme? Well here&apos;s you chance
+            to make sure she never forgets! Add in any fun, embarassing, stupid,
+            or otherwise memorable photo or video you have with her into this
             shared Google Drive.
           </p>
 
