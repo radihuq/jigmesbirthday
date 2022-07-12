@@ -10,6 +10,12 @@ const Home: NextPage = () => {
       <Head>
         <title>Jigme&apos;s Birthday</title>
         <link rel="icon" href="/favicon.ico" />
+
+        <style>
+          background: #CF371F; background: linear-gradient(to right, #CF371F 0%,
+          #CD8FCF 100%); -webkit-background-clip: text; -webkit-text-fill-color:
+          transparent;
+        </style>
       </Head>
 
       <Container className="py-6 flex-grow-1 d-flex justify-content-center align-items-center flex-column">
@@ -19,39 +25,53 @@ const Home: NextPage = () => {
 
         <h2 className="col-12 display-4 text-white text-center ">
           Help give her the gift of{" "}
-          <span className="text-danger">memories</span>{" "}
+          <span
+            style={{
+              background: "linear-gradient(to right, #F0932B 0%, #f6e58d 100%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+            }}
+          >
+            memories
+          </span>{" "}
           <small>#justbrokethings</small>
         </h2>
 
         <div className="d-none d-md-block">
           <div className="d-flex flex-row">
-            <Gifts />
+            <Gifts addPadding={true} />
           </div>
         </div>
 
         <div className="d-block d-md-none">
           <div className="d-flex flex-column">
-            <Gifts />
+            <Gifts addPadding={false} />
           </div>
         </div>
       </Container>
+
+      <div>
+        <p className="text-white text-center">
+          Made with ♥ by Jigme&apos;s friends
+        </p>
+      </div>
     </div>
   );
 };
 
 export default Home;
 
-const Gifts = () => {
+const Gifts = ({ addPadding }: { addPadding: boolean }) => {
   return (
     <>
-      <Card className="mx-3" style={{ height: 300 }}>
+      <Card className="w-100" style={{ height: 300 }}>
         <Card.Body>
-          <h3>Crowd-sourced Spotify Playlist</h3>
+          <h3>Curated Spotify Playlist</h3>
 
           <p>
-            Toss in a song that reminds you of a memory with Jigme. She can use
-            this playlist to wake up, in the shower, crying at night, or on your
-            next road trip
+            Toss in a song that reminds you of a memory with Jigme. In the end
+            she can use this playlist to help wake up, to get over a breakup, to
+            tune out annoying people, or just chill &#38; vibe.
           </p>
 
           <small>
@@ -71,13 +91,17 @@ const Gifts = () => {
         </Card.Footer>
       </Card>
 
-      <Card className="mx-3" style={{ height: 300 }}>
+      {addPadding && <div className="px-3" />}
+
+      <Card className="w-100" style={{ height: 300 }}>
         <Card.Body>
-          <h3>Group Drive</h3>
+          <h3>Group Media Drive</h3>
 
           <p>
-            Remember that thing that you did with Jigme? Well, make sure she
-            never forgets by adding in photos & videos into this drive.
+            Remember that thing you did with Jigme? Well here's you chance to
+            make sure she never forgets! Add in any fun, embarassing, stupid, or
+            otherwise memorable photo or video you have with her into this
+            shared Google Drive.
           </p>
 
           <small>
