@@ -16,16 +16,27 @@ const Messages: NextPage = () => {
       try {
         const { data, error } = await supabase
           .from("messages")
-          .select("name,message,visible");
+          .select("name,message,visible,created_at");
 
         if (error) {
           throw error;
         }
+
+        console.log(data);
+
+        type DataRes = {
+          message: string;
+          name: string;
+          visible: boolean;
+          created_at: string;
+        };
+
         setMessages(
-          data.filter(
-            (data: { message: string; name: string; visible: boolean }) =>
-              data.visible === true
-          )
+          data
+            .filter((data: DataRes) => data.visible === true)
+            .sort(function (a: DataRes, b: DataRes) {
+              return Date.parse(b.created_at) - Date.parse(a.created_at);
+            })
         );
       } catch (error) {
         console.log(error);
