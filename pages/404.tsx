@@ -13,7 +13,10 @@ const Home: NextPage = () => {
 
       <div className="w-100 min-vh-100 d-flex flex-column justify-content-center align-items-center">
         <h2 className="display-4 text-white">
-          404 - this page could not be found. <Link href="/">Go back home</Link>
+          404 - this page could not be found.{" "}
+          <Link href="/" className="text-white">
+            Go back home
+          </Link>
         </h2>
       </div>
     </div>
