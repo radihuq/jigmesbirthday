@@ -16,13 +16,17 @@ const Messages: NextPage = () => {
       try {
         const { data, error } = await supabase
           .from("messages")
-          .select("name,message");
+          .select("name,message,visible");
 
         if (error) {
           throw error;
         }
-
-        setMessages(data);
+        setMessages(
+          data.filter(
+            (data: { message: string; name: string; visible: boolean }) =>
+              data.visible === true
+          )
+        );
       } catch (error) {
         console.log(error);
         setError(true);
